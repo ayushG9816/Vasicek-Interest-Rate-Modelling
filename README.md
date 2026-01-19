@@ -79,13 +79,14 @@ If the Vasicek model is correctly specified, these errors should follow a standa
 This normality assumption of errors following a normal distribution allows us to apply Maximum Likelihood Estimation (MLE) to construct a likelihood function for the observed data, which can be maximized to estimate the model parameters 𝛼, 𝜇, and 𝜎. 
 The probability density function (PDF) of the normal distribution is given by:
 
-f(𝜖𝑡) = \frac{1}{\sqrt{2\pi\sigma^{2}}}*e^{\frac{-\epsilon^2}{2\sigma^2}}$
+<img width="864" height="114" alt="image" src="https://github.com/user-attachments/assets/a690fc5d-26b6-433c-8803-8dca6c6a2e1d" />
 
 
 At each time step, 𝑡, the likelihood of observing the realized interest rate—conditional on the model parameters—can be expressed using this PDF. Since we observe a sequence of 𝑡 data points, the total likelihood L is the product of the individual likelihoods across all time steps:
 
 
- 
+ <img width="864" height="114" alt="image" src="https://github.com/user-attachments/assets/516cfa0d-6799-4595-a90a-3576fd322ad0" />
+
 
 
 However, working with the product of many small probability values can lead to numerical instability. Therefore, it is standard practice to instead maximize the log-likelihood function, which transforms the product into a sum and simplifies computation.
